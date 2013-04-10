@@ -14,3 +14,7 @@ end
 get "/:command/:key/:value" do |command, key, value|
   redis.send "#{command}", "#{key}", "#{value}"
 end
+
+get "/:command/:key/:value1/:value2" do |command, key, value1, value2|
+  redis.send "#{command}", "#{key}", "#{value1}", "#{value2}"
+end
